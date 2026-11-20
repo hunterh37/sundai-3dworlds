@@ -46,7 +46,7 @@ pre i{font-style:normal;color:#8c8c8c}
 </style></head><body>
 
 <section class="s">
-<div class="top m"><span></span><span>01 / 08</span></div>
+<div class="top m"><span></span><span>01 / 09</span></div>
 <svg class="mark" fill="none" stroke-linecap="square" stroke-miterlimit="10" version="1.1" viewBox="0 0 226.77 226.77" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(8.964 4.2527)" fill-rule="evenodd" stroke="#f2f2f2" stroke-linecap="butt" stroke-linejoin="round" stroke-width="4">
   <path d="m63.02 200.61-43.213-174.94 173.23 49.874z"/>
@@ -64,7 +64,12 @@ pre i{font-style:normal;color:#8c8c8c}
 <span class="m" style="color:#f2f2f2;display:block;margin-top:16px;font-size:16px">github.com/hunterh37/sundai-3dworlds</span></div>
 </section>
 
-<section class="s"><div class="top m"><span>Guide</span><span>02 / 08</span></div>
+<section class="s" style="padding:0">
+<video src="assets/welcome.mp4" poster="assets/welcome.jpg" controls playsinline style="position:absolute;inset:0;width:100%;height:100%;z-index:1;background:#000"></video>
+<div class="top m" style="position:absolute;left:140px;right:140px;top:40px;z-index:2;color:#f2f2f2;pointer-events:none"><span>Welcome</span><span>02 / 09</span></div>
+</section>
+
+<section class="s"><div class="top m"><span>Guide</span><span>03 / 09</span></div>
 <h2 class="ab">Scene, camera, loop</h2>
 <div class="cols"><pre><i>// npm i three</i>
 import * as THREE from 'three';
@@ -102,19 +107,19 @@ renderer.setAnimationLoop((t) => {
 </div></div>
 </section>
 
-<section class="s"><div class="top m"><span>Shaders</span><span>03 / 08</span></div>
+<section class="s"><div class="top m"><span>Shaders</span><span>04 / 09</span></div>
 <h2 class="ab sm">Shaders</h2>
 <div class="tiles"><div class="t"><img src="assets/webgl_postprocessing_unreal_bloom.jpg"><b>Bloom</b><span>UnrealBloomPass</span></div><div class="t"><img src="assets/webgl_materials_toon.jpg"><b>Toon</b><span>MeshToonMaterial</span></div><div class="t"><img src="assets/webgl_materials_matcap.jpg"><b>Matcap</b><span>MeshMatcapMaterial</span></div><div class="t"><img src="assets/webgl_materials_physical_transmission.jpg"><b>Glass</b><span>transmission, ior</span></div><div class="t"><img src="assets/webgl_shader_lava.jpg"><b>Noise</b><span>fbm in fragment</span></div><div class="t"><img src="assets/webgl_shaders_ocean.jpg"><b>Ocean</b><span>Water.js</span></div><div class="t"><img src="assets/webgl_shaders_sky.jpg"><b>Sky</b><span>Sky.js, scattering</span></div><div class="t"><img src="assets/webgpu_volume_cloud.jpg"><b>Volume</b><span>raymarched 3D tex</span></div><div class="t"><img src="assets/webgpu_caustics.jpg"><b>Caustics</b><span>light through water</span></div><div class="t"><img src="assets/webgl_postprocessing_godrays.jpg"><b>God rays</b><span>radial blur pass</span></div></div></section>
 
-<section class="s"><div class="top m"><span>Styles</span><span>04 / 08</span></div>
+<section class="s"><div class="top m"><span>Styles</span><span>05 / 09</span></div>
 <h2 class="ab sm">Art styles</h2>
 <div class="tiles"><div class="t"><img src="assets/webgl_animation_keyframes.jpg"><b>Diorama</b><span>isometric, baked light</span></div><div class="t"><img src="assets/webgpu_postprocessing_pixel.jpg"><b>Pixel art</b><span>RenderPixelatedPass</span></div><div class="t"><img src="assets/webgl_interactive_voxelpainter.jpg"><b>Voxel</b><span>cubes on a grid</span></div><div class="t"><img src="assets/webgpu_postprocessing_retro.jpg"><b>PS1 retro</b><span>low res, vertex snap</span></div><div class="t"><img src="assets/webgpu_tsl_halftone.jpg"><b>Halftone</b><span>print dots</span></div><div class="t"><img src="assets/webgl_effects_ascii.jpg"><b>ASCII</b><span>AsciiEffect</span></div><div class="t"><img src="assets/webgl_lines_fat_wireframe.jpg"><b>Wireframe</b><span>Line2, neon</span></div><div class="t"><img src="assets/webgpu_postprocessing_sobel.jpg"><b>Line art</b><span>sobel edges</span></div><div class="t"><img src="assets/webgpu_tsl_procedural_terrain.jpg"><b>Low poly</b><span>flat shading</span></div><div class="t"><img src="assets/webgl_postprocessing_dof2.jpg"><b>Tilt shift</b><span>depth of field</span></div></div></section>
 
-<section class="s"><div class="top m"><span>FX</span><span>05 / 08</span></div>
+<section class="s"><div class="top m"><span>FX</span><span>06 / 09</span></div>
 <h2 class="ab sm">FX</h2>
 <div class="tiles"><div class="t"><img src="assets/fx/datamosh.jpg"><b>Datamosh</b><span>smeared motion blocks</span></div><div class="t"><img src="assets/webgl_postprocessing_glitch.jpg"><b>Glitch</b><span>GlitchPass</span></div><div class="t"><img src="assets/fx/aberration.jpg"><b>Aberration</b><span>RGB channel split</span></div><div class="t"><img src="assets/fx/blob.jpg"><b>Blob tracking</b><span>threshold + boxes</span></div><div class="t"><img src="assets/fx/pixelsort.jpg"><b>Pixel sort</b><span>sort by brightness</span></div><div class="t"><img src="assets/fx/feedback.jpg"><b>Feedback</b><span>AfterimagePass</span></div><div class="t"><img src="assets/fx/crt.jpg"><b>CRT</b><span>scanlines + mask</span></div><div class="t"><img src="assets/fx/dither.jpg"><b>1-bit dither</b><span>Bayer matrix</span></div><div class="t"><img src="assets/fx/slitscan.jpg"><b>Slit scan</b><span>time per column</span></div><div class="t"><img src="assets/fx/vhs.jpg"><b>VHS</b><span>jitter, bleed, noise</span></div></div></section>
 
-<section class="s"><div class="top m"><span>Examples</span><span>06 / 08</span></div>
+<section class="s"><div class="top m"><span>Examples</span><span>07 / 09</span></div>
 <h2 class="ab">Worlds</h2>
 <div class="ex">
 <div><img class="shot" src="assets/bruno.png"><span class="url">bruno-simon.com</span><h3>Drivable portfolio</h3>
@@ -125,7 +130,7 @@ renderer.setAnimationLoop((t) => {
 <div class="pr">Make a small sphere planet in Three.js. A character walks on its surface with gravity toward the center. Camera orbits behind. Add toon shading and soft fog.</div></div>
 </div></section>
 
-<section class="s"><div class="top m"><span>Examples</span><span>07 / 08</span></div>
+<section class="s"><div class="top m"><span>Examples</span><span>08 / 09</span></div>
 <h2 class="ab">Shaders + data</h2>
 <div class="ex">
 <div><img class="shot" src="assets/webgpu_tsl_galaxy.jpg"><span class="url">threejs.org/examples</span><h3>Particle galaxy</h3>
@@ -136,7 +141,7 @@ renderer.setAnimationLoop((t) => {
 <div class="pr">Render a wireframe globe in Three.js. Load a JSON of cities with lat and lon, draw them as points, connect pairs with animated arcs. OrbitControls with damping.</div></div>
 </div>
 </section>
-<section class="s"><div class="top m"><span>Prompts</span><span>08 / 08</span></div>
+<section class="s"><div class="top m"><span>Prompts</span><span>09 / 09</span></div>
 <h2 class="ab sm">Prompts</h2>
 <div class="plist"><div class="p"><b>Portfolio</b><span>Build a Three.js portfolio for my [work]. Each project is a floating object in a dark room. Click flies the camera to it and opens details.</span></div><div class="p"><b>Game</b><span>Make a Three.js endless runner. Low poly road, WASD to dodge, score in the corner, speed rises every 10 s. One file.</span></div><div class="p"><b>Music</b><span>Audio-reactive scene: load an mp3, use AnalyserNode, bass scales a sphere, highs spawn particles. Bloom on.</span></div><div class="p"><b>Webcam</b><span>Use the webcam as a texture on a plane. Add datamosh and RGB split that spike when motion is detected.</span></div><div class="p"><b>Product</b><span>Show my GLB product on a turntable. Studio lighting, orbit controls, color swatches that swap the material.</span></div><div class="p"><b>Data</b><span>Plot this CSV as 3D bars on a grid. Hover shows the value. Camera eases to the tallest bar on load.</span></div><div class="p"><b>Multiplayer</b><span>Shared room with Three.js + WebSockets. Each visitor is a glowing cube that moves with the arrow keys.</span></div><div class="p"><b>Shader</b><span>Full-screen fragment shader of flowing ink. Mouse pushes the fluid. Black and white, film grain.</span></div></div>
 <div class="qr4"><svg style="width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" width="330" height="330" class="segno"><path transform="scale(10)" class="qrline" stroke="#f2f2f2" d="M0 0.5h7m7 0h1m3 0h4m1 0h1m2 0h7m-33 1h1m5 0h1m1 0h2m5 0h1m1 0h1m3 0h1m1 0h2m1 0h1m5 0h1m-33 1h1m1 0h3m1 0h1m1 0h1m1 0h2m1 0h1m1 0h2m2 0h2m3 0h1m1 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m2 0h5m2 0h1m1 0h1m3 0h1m3 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m2 0h1m1 0h4m1 0h1m3 0h1m5 0h1m1 0h3m1 0h1m-33 1h1m5 0h1m2 0h1m6 0h7m1 0h1m1 0h1m5 0h1m-33 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-22 1h4m2 0h1m1 0h2m2 0h2m-24 1h3m1 0h2m2 0h3m5 0h8m5 0h2m-32 1h2m1 0h2m3 0h2m1 0h4m1 0h2m1 0h3m1 0h1m2 0h2m1 0h2m1 0h1m-33 1h3m2 0h4m1 0h1m1 0h2m4 0h1m1 0h1m1 0h2m1 0h5m1 0h2m-31 1h1m5 0h1m1 0h2m3 0h3m1 0h1m2 0h1m4 0h1m1 0h1m1 0h2m-33 1h3m1 0h6m3 0h1m1 0h1m3 0h2m1 0h4m2 0h2m-28 1h1m1 0h2m8 0h3m2 0h1m1 0h2m4 0h1m1 0h3m-30 1h1m1 0h1m1 0h1m3 0h4m1 0h1m1 0h1m1 0h1m1 0h1m2 0h1m1 0h2m-28 1h1m4 0h1m1 0h1m2 0h4m2 0h1m3 0h2m2 0h4m2 0h1m-29 1h1m2 0h2m1 0h1m1 0h1m3 0h1m2 0h1m2 0h3m2 0h2m1 0h1m1 0h1m-31 1h6m3 0h1m2 0h1m2 0h3m2 0h1m1 0h5m1 0h2m2 0h1m-33 1h1m1 0h2m1 0h3m2 0h1m2 0h2m2 0h1m2 0h1m1 0h1m1 0h5m1 0h2m-30 1h2m1 0h1m1 0h2m2 0h1m1 0h1m2 0h2m1 0h1m2 0h3m3 0h1m2 0h2m-32 1h3m2 0h1m4 0h4m1 0h1m1 0h1m2 0h1m5 0h1m1 0h2m-31 1h2m2 0h1m2 0h2m1 0h1m4 0h3m1 0h3m1 0h1m2 0h1m3 0h1m1 0h1m-29 1h1m1 0h2m1 0h2m1 0h3m1 0h2m2 0h2m1 0h6m1 0h3m-32 1h1m1 0h1m1 0h1m2 0h4m2 0h1m1 0h2m1 0h2m5 0h2m3 0h1m-32 1h1m1 0h1m1 0h4m3 0h1m2 0h1m1 0h1m2 0h1m2 0h1m1 0h6m1 0h2m-25 1h2m1 0h1m3 0h1m3 0h3m2 0h1m3 0h2m-30 1h7m3 0h2m1 0h3m1 0h5m1 0h2m1 0h1m1 0h1m-29 1h1m5 0h1m1 0h2m2 0h6m2 0h5m3 0h3m-31 1h1m1 0h3m1 0h1m2 0h1m1 0h5m2 0h11m1 0h3m-33 1h1m1 0h3m1 0h1m1 0h2m2 0h1m2 0h1m4 0h2m1 0h1m3 0h1m1 0h1m1 0h2m-33 1h1m1 0h3m1 0h1m1 0h3m2 0h2m1 0h2m4 0h1m3 0h2m1 0h1m-30 1h1m5 0h1m1 0h1m4 0h1m1 0h2m2 0h2m1 0h8m2 0h1m-33 1h7m2 0h1m1 0h3m2 0h1m2 0h1m1 0h1m1 0h1m1 0h1m2 0h1m1 0h1"/></svg>
