@@ -51,6 +51,27 @@ Paste one into Claude, Cursor or any coding agent.
 **Data globe** (see [globe.gl](https://globe.gl))
 > Render a wireframe globe in Three.js. Load a JSON of cities with lat and lon, draw them as points, connect pairs with animated arcs. OrbitControls with damping.
 
+## More prompts
+
+| Idea | Prompt |
+|---|---|
+| Portfolio | Build a Three.js portfolio for my [work]. Each project is a floating object in a dark room. Click flies the camera to it and opens details. |
+| Game | Make a Three.js endless runner. Low poly road, WASD to dodge, score in the corner, speed rises every 10 s. One file. |
+| Music | Audio-reactive scene: load an mp3, use AnalyserNode, bass scales a sphere, highs spawn particles. Bloom on. |
+| Webcam | Use the webcam as a texture on a plane. Add datamosh and RGB split that spike when motion is detected. |
+| Product | Show my GLB product on a turntable. Studio lighting, orbit controls, color swatches that swap the material. |
+| Data | Plot this CSV as 3D bars on a grid. Hover shows the value. Camera eases to the tallest bar on load. |
+| Multiplayer | Shared room with Three.js + WebSockets. Each visitor is a glowing cube that moves with the arrow keys. |
+| Shader | Full-screen fragment shader of flowing ink. Mouse pushes the fluid. Black and white, film grain. |
+
+## Looks to ask for
+
+- Shaders: bloom, toon, matcap, glass, noise, ocean, sky, volume clouds, caustics, god rays
+- Styles: diorama, pixel art, voxel, PS1 retro, halftone, ASCII, wireframe, line art, low poly, tilt shift
+- FX: datamosh, glitch, chromatic aberration, blob tracking, pixel sort, feedback, CRT, 1-bit dither, slit scan, VHS
+
+FX previews in `assets/fx/` are made by `scripts/fx.py` from a frame.
+
 ## Links
 
 - Docs: https://threejs.org/docs
