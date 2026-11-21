@@ -51,6 +51,12 @@ Paste one into Claude, Cursor or any coding agent.
 **Data globe** (see [globe.gl](https://globe.gl))
 > Render a wireframe globe in Three.js. Load a JSON of cities with lat and lon, draw them as points, connect pairs with animated arcs. OrbitControls with damping.
 
+**Pop-up book portfolio** (live: [hunt3r.org/demos/popup](http://hunt3r.org/demos/popup/), built by Fable 5.2)
+> Three.js portfolio as a pop-up book. One app per spread, cut-paper layers stand up as the page turns. Two-ink risograph print, halftone, soft shadows. Drag to turn, tap an icon to open it.
+
+**Chladni plate** (live: [hunt3r.org/demos/chladni](http://hunt3r.org/demos/chladni/), built by Fable 5.2)
+> Chladni plate in Three.js. 46,000 sand grains jitter by local plate amplitude and settle on the nodal lines. Drag to tune the mode, play the tone. Low-res render, 1-bit Bayer dither.
+
 ## More prompts
 
 | Idea | Prompt |
