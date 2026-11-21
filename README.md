@@ -72,6 +72,20 @@ Paste one into Claude, Cursor or any coding agent.
 
 FX previews in `assets/fx/` are made by `scripts/fx.py` from a frame.
 
+## Vision loop: photo to Three.js
+
+`loop/scene.html?obj=apple|duck|ball&v=1..5` rebuilds three reference photos (`assets/loop/`, Wikimedia Commons: CC0, CC BY-SA 4.0, CC BY 4.0). Render one to PNG:
+
+```bash
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --use-angle=swiftshader \
+  --enable-unsafe-swiftshader --allow-file-access-from-files --virtual-time-budget=15000 \
+  --window-size=800,600 --screenshot=out.png "file://$PWD/loop/scene.html?obj=duck&v=5"
+```
+
+> Recreate photo.jpg in Three.js. Screenshot your render, compare it side by side with the photo, score realism 0-10, fix the top 3 gaps. Loop until 7.0+. Never grade without viewing both images.
+
+Scores v1 to v5: apple 3.0 to 6.0, duck 3.5 to 6.5, ball 2.0 to 7.2.
+
 ## Links
 
 - Docs: https://threejs.org/docs
