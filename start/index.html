@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Getting started</title>
+<link rel="icon" href="data:,">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#f4f2ec; --fg:#0a0a0a; --mute:#6b6862; --hot:#ff8a3d; --code:#e9e6dd; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0e0e0d; --fg:#f4f2ec; --mute:#8d8a83; --code:#1c1b19; } }
+  html, body { margin:0; background:var(--bg); color:var(--fg); }
+  main { max-width:860px; margin:0 auto; padding:10vh 16px 14vh; font:300 15px/1.6 "Geist Mono", monospace; }
+  nav { font-size:12px; letter-spacing:.16em; text-transform:uppercase; margin-bottom:6vh; }
+  nav a, a { color:inherit; }
+  h1 { font:400 clamp(44px,9vw,104px)/1 "Instrument Serif", serif; margin:0 0 4vh; }
+  h2 { font:400 clamp(28px,5vw,44px)/1.1 "Instrument Serif", serif; margin:9vh 0 2vh; padding-top:2vh; border-top:1px solid var(--fg); }
+  h3 { font-weight:400; font-size:15px; margin:4vh 0 1vh; }
+  pre { background:var(--code); padding:16px; overflow-x:auto; font:400 13px/1.5 "Geist Mono", monospace; white-space:pre-wrap; word-break:break-word; position:relative; }
+  button.copy { position:absolute; top:8px; right:8px; font:400 11px "Geist Mono", monospace; letter-spacing:.1em; text-transform:uppercase; background:var(--fg); color:var(--bg); border:0; padding:6px 10px; cursor:pointer; }
+  button.copy:hover { background:var(--hot); }
+  ol { padding-left:20px; }
+  li { margin:.6em 0; }
+  .m { color:var(--mute); }
+</style>
+</head>
+<body>
+<main>
+  <nav><a href="../">Sundai 3D Worlds</a> / Getting started · <a href="../demos/">Demos</a></nav>
+  <h1>Getting started</h1>
+  <p>From zero to a running Three.js world in ten minutes. Paste the system prompt into your agent, pick an example, iterate.</p>
+
+  <h2>1. Setup</h2>
+  <ol>
+    <li>Install Node 20+ (<a href="https://nodejs.org">nodejs.org</a>).</li>
+    <li>Open a coding agent: Claude Code, Cursor, or claude.ai.</li>
+    <li>Run:</li>
+  </ol>
+<pre><code>npm create vite@latest my-world -- --template vanilla
+cd my-world &amp;&amp; npm i three &amp;&amp; npm run dev</code></pre>
+  <p>Open the localhost URL Vite prints. Edits to <code>main.js</code> reload live.</p>
+
+  <h2>2. System prompt</h2>
+  <p>Paste this first, before any idea. In Claude Code save it as <code>CLAUDE.md</code> in the project root; in Cursor as <code>.cursorrules</code>.</p>
+<pre><code>You are building a Three.js world for a one-day hackathon. Ship something that runs, then make it beautiful.
+
+Stack
+- Vite vanilla template, ES modules, `import * as THREE from 'three'`.
+- Addons from 'three/addons/...' (OrbitControls, GLTFLoader, EffectComposer, UnrealBloomPass).
+- Physics: cannon-es or @dimforge/rapier3d-compat. Only if the idea needs it.
+- No React, no TypeScript, no build config changes unless asked.
+
+Rules
+- Every reply leaves the app running. Never leave a black screen.
+- Start with: scene, camera, renderer.setAnimationLoop, resize handler, setPixelRatio(min(devicePixelRatio, 2)).
+- Keep main.js under 300 lines. Split into world.js, controls.js, fx.js when it grows.
+- Primitives and procedural geometry first. No external models until the core loop works.
+- Lighting: HemisphereLight + one DirectionalLight with shadows. Set renderer.outputColorSpace = SRGBColorSpace and ACESFilmic tone mapping.
+- Performance: InstancedMesh for anything over 100 copies, BufferGeometry for particles, dispose what you remove. Target 60 fps on a laptop.
+- Input: mouse/touch and keyboard both work. Show a one-line hint overlay of the controls.
+- When something breaks, read the browser console error first and fix the cause.
+
+Workflow
+1. Restate the idea in one sentence and list the 3 steps you will build.
+2. Build step 1 as a minimal running scene. Tell me what to look at.
+3. Add the interaction. Then the look (color palette, fog, post FX).
+4. After each step, suggest one concrete upgrade I can say yes to.
+
+Style default (override if I say otherwise)
+- Limited palette: 2 to 3 colors plus black or off-white.
+- Fog matching the background color. Soft shadows. Slow camera easing.
+- One signature effect (bloom, dither, toon, halftone) instead of many.</code></pre>
+
+  <h2>3. Examples</h2>
+  <p class="m">Live builds and prompts to remix. Paste one after the system prompt.</p>
+
+  <h3>Pop-up book · <a href="../demos/popup/">live</a></h3>
+<pre><code>Three.js portfolio as a pop-up book. One app per spread, cut-paper layers stand up as the page turns. Two-ink risograph print, halftone, soft shadows. Drag to turn, tap an icon to open it.</code></pre>
+
+  <h3>Chladni plate · <a href="../demos/chladni/">live</a></h3>
+<pre><code>Chladni plate in Three.js. 46,000 sand grains jitter by local plate amplitude and settle on the nodal lines. Drag to tune the mode, play the tone. Low-res render, 1-bit Bayer dither.</code></pre>
+
+  <h3>Drivable world · <a href="https://bruno-simon.com">reference</a></h3>
+<pre><code>Build a Three.js scene with a low-poly car on a flat plane. WASD drives it, cannon-es for physics, camera follows from above at 45°. Black ground, white objects.</code></pre>
+
+  <h3>Tiny planet · <a href="https://messenger.abeto.co">reference</a></h3>
+<pre><code>Make a small sphere planet in Three.js. A character walks on its surface with gravity toward the center. Camera orbits behind. Add toon shading and soft fog.</code></pre>
+
+  <h3>Particle galaxy · <a href="https://threejs.org/examples/#webgpu_tsl_galaxy">reference</a></h3>
+<pre><code>Build a spiral galaxy of 50,000 particles in Three.js with a ShaderMaterial. Three arms, hot pink core fading to violet at the edges, slow rotation, additive blending, OrbitControls.</code></pre>
+
+  <h3>Data globe · <a href="https://globe.gl">reference</a></h3>
+<pre><code>Render a wireframe globe in Three.js. Load a JSON of cities with lat and lon, draw them as points, connect pairs with animated arcs. OrbitControls with damping.</code></pre>
+
+  <h2>4. Iterate</h2>
+  <p>Follow-up prompts that work on any scene:</p>
+<pre><code>Add post-processing: UnrealBloomPass on emissive parts only, subtle film grain, vignette.</code></pre>
+<pre><code>Make it feel alive: idle animation on every object, camera breathes slightly, ambient particles drift.</code></pre>
+<pre><code>It runs slow. Profile draw calls with renderer.info, merge or instance what repeats, cap pixel ratio at 1.5.</code></pre>
+<pre><code>Add a title overlay, a mute button, and a share link. Then deploy to GitHub Pages with vite build.</code></pre>
+
+  <h2>5. Ship</h2>
+<pre><code>npm run build
+npx vercel deploy dist     # or drag dist/ onto app.netlify.com/drop</code></pre>
+  <p>Set <code>base: './'</code> in vite.config.js for GitHub Pages subpaths.</p>
+</main>
+<script>
+document.querySelectorAll('pre').forEach(p => {
+  const b = document.createElement('button'); b.className = 'copy'; b.textContent = 'Copy';
+  b.onclick = () => { navigator.clipboard.writeText(p.querySelector('code').innerText).then(() => { b.textContent = 'Copied'; setTimeout(() => b.textContent = 'Copy', 1200); }); };
+  p.appendChild(b);
+});
+</script>
+</body>
+</html>

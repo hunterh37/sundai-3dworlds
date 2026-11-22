@@ -2,6 +2,8 @@
 
 Slides and starter prompts for the Sundai 3D worlds hackathon.
 
+**[Getting started guide](http://hunt3r.org/start/)**: setup, a system prompt for your coding agent, examples, ship steps. Source: [start/index.html](start/index.html). Live demos: [hunt3r.org/demos](http://hunt3r.org/demos/).
+
 - [threejs-hackathon.pdf](threejs-hackathon.pdf): the deck
 - [threejs-hackathon.pptx](threejs-hackathon.pptx): same deck for Keynote and PowerPoint
 - [deck.html](deck.html): source, open in a browser
