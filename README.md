@@ -59,6 +59,9 @@ Paste one into Claude, Cursor or any coding agent.
 **Chladni plate** (live: [hunt3r.org/demos/chladni](http://hunt3r.org/demos/chladni/), built by Fable 5.2)
 > Chladni plate in Three.js. 46,000 sand grains jitter by local plate amplitude and settle on the nodal lines. Drag to tune the mode, play the tone. Low-res render, 1-bit Bayer dither.
 
+**Suspension Lab** (live: [suspension-lab.zh-a16.workers.dev](https://suspension-lab.zh-a16.workers.dev/), [source](https://github.com/Metdez/World-models), built by Fable 5.2)
+> Three.js lab that shows how suspension geometry changes what the wheel does. Same lap, same bump. Swap strut, wishbone, multi-link, drive the car, watch camber and load live. Dark telemetry HUD over a foggy track.
+
 ## More prompts
 
 | Idea | Prompt |
